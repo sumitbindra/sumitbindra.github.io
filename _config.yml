@@ -16,7 +16,7 @@
 title: Sumit Bindra
 email: sumitbindra@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  An inarguably well-designed Jekyll theme.
+  Building AI agents and intelligent systems
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sumitbindra.com" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/icon-512.png
@@ -43,3 +43,15 @@ plugins:
 
 paginate: 3
 paginate_path: "/page/:num/"
+
+show_excerpts: true
+hide_credits: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - "*.gemspec"
+  - node_modules
+  - vendor
