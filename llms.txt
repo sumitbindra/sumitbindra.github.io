@@ -1,0 +1,44 @@
+# Sumit Bindra
+
+> Applied AI Engineer | Multi-Agent LLM Systems & Voice AI | 15 Years Transportation Data Modeling
+
+I build production-grade multi-agent LLM and voice AI applications backed by 15 years of transportation and data modeling experience. I ship end-to-end AI systems—from Gemini-orchestrated multi-agent platforms with tool calling and RAG to ElevenLabs voice agents—using Python, TypeScript, FastAPI, and modern AI frameworks.
+
+Currently: Project Manager & Senior Modeler at TransLink (Metro Vancouver transit authority) and building AI agent applications.
+
+## Sections
+
+- [About](/about.html): Detailed experience, technical background, education, and publications
+- [Projects](/projects.html): Case studies of multi-agent LLM systems, AI × transportation projects, and voice AI applications
+- [Resume](/assets/resume/Sumit_Bindra_Resume.pdf): Full resume (PDF)
+- [LinkedIn](https://www.linkedin.com/in/sumitbindra/)
+- [GitHub](https://github.com/sumitbindra)
+
+## Key Areas
+
+### AI & LLM Engineering
+Multi-agent orchestration (Google ADK, tool/function calling), voice AI (ElevenLabs Conversational AI, Twilio), RAG and hybrid retrieval (embeddings + BM25) with pgvector (Supabase), LLM evaluation frameworks, DSPy prompt optimization, MCP servers, structured extraction, LangChain, LlamaIndex, Gemini, OpenAI, Claude.
+
+### Development & Data Engineering
+Python, TypeScript, React, Next.js, FastAPI, SQL, R. Supabase/Postgres, DuckDB, Parquet, Databricks, pandas, GeoPandas, scikit-learn. Docker, Railway, Modal (serverless). pytest, Vitest, Playwright.
+
+### Transportation & Mobility Data
+Travel demand modeling: ActivitySim, AequilibraE, four-step models, activity-based models. TransCAD, GTFS, cellphone O-D, INRIX, household travel surveys, GPS traces. Ridership and demand forecasting. Geocoding (Google Maps Geocoding API).
+
+## Experience
+
+**TransLink** (Metro Vancouver, BC) - Project Manager & Senior Transportation Data Modeler, Sep 2019–Present
+
+**Resource Systems Group Inc. (RSG)** (White River Junction, VT) - Consultant & Data Analyst, Aug 2011–Aug 2019
+
+**Independent AI Application Development** - Applied AI Engineer, Jan 2021–Present
+
+## Education
+
+- MS Civil Engineering, University of Connecticut (2006–2007)
+- BTech Civil Engineering, Indian Institute of Technology (IIT) Guwahati (2001–2005)
+
+## Contact
+
+- Email: sumitbindra@gmail.com
+- Website: https://sumitbindra.com
