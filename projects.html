@@ -3,35 +3,56 @@ layout: post
 title: Projects
 ---
 
-<p>Ventures and projects I've built, from AI agents to consumer apps.</p>
+<p>Selected AI and data modeling projects demonstrating end-to-end system design, implementation, and evaluation.</p>
 
-<h2>AI & LLMs</h2>
+<h2>Multi-Agent LLM Systems</h2>
 
-<h3>ReAgent</h3>
-<p><strong>Founder</strong> — Building autonomous AI agents powered by large language models. ReAgent focuses on creating reliable, task-oriented agents that can reason, plan, and execute complex workflows.</p>
-<p><em>More details coming soon.</em></p>
+<h3>ouroAI: Multi-Agent CRM Automation Platform</h3>
+<p><strong>Problem:</strong> Real-estate and sales teams need intelligent automation that can handle SMS, email, WhatsApp, and voice outreach while maintaining context and knowing when to escalate to humans.</p>
+<p><strong>What I Built:</strong> A Gemini-orchestrated multi-agent platform where four specialized tool-calling agents (query, outreach, sync, reporting) coordinate across communication channels. Replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labeled conversations, achieving 88.9% accuracy on a held-out validation set. Implemented hybrid retrieval (Gemini embeddings + BM25) over CRM contacts and per-account knowledge bases synced to voice agents.</p>
+<p><strong>Stack:</strong> React, TypeScript, FastAPI, Supabase (Postgres with pgvector, Auth, RLS multi-tenancy), Docker, Railway. 238 commits, 28+ PRs, 50+ pytest files plus Vitest and Playwright E2E tests.</p>
 
-<h3>CICA AI</h3>
-<p><strong>Founder</strong> — AI-powered commercial insurance platform. Used LLMs for policy analysis, risk assessment, and underwriting automation to streamline the commercial insurance workflow.</p>
+<h3>AI Voice Call Scheduler with ElevenLabs & Twilio</h3>
+<p><strong>Problem:</strong> Businesses need intelligent voice agents that can handle inbound and outbound calls, schedule appointments, handle voicemails, and sync with CRMs—without human intervention for routine calls.</p>
+<p><strong>What I Built:</strong> Inbound and outbound voice agents on ElevenLabs Conversational AI integrated with Twilio phone numbers. Signature-verified FastAPI webhooks handle scheduling logic, voicemail auto-reschedule, and CRM booking via server tools. Gemini analyzes each transcript for summary, sentiment, action items, and reschedule intent.</p>
+<p><strong>Stack:</strong> ElevenLabs Conversational AI, Twilio, FastAPI, Gemini, webhook authentication, CRM integrations.</p>
 
-<h2>Startups</h2>
+<h3>CICA: Construction & Insurance Document AI</h3>
+<p><strong>Problem:</strong> Commercial insurance underwriting and construction bidding require extracting structured data from complex documents (bid forms, specifications, proposals) and identifying financial, schedule, scope, and legal discrepancies.</p>
+<p><strong>What I Built:</strong> Structured extraction pipeline using OpenAI/Gemini with Pydantic/JSON-schema validation, LlamaIndex RAG, Azure Document Intelligence, and Reducto parsing. Built an LLM-judged evaluation harness to measure extraction accuracy and discrepancy detection across document types.</p>
+<p><strong>Stack:</strong> OpenAI, Gemini, Pydantic, LlamaIndex, Azure Document Intelligence, Reducto, LLM-based eval framework.</p>
 
-<h3>Yingo</h3>
-<p>Mobile app connecting local businesses with consumers through real-time deals and promotions. Built the full stack from mobile app to backend services.</p>
+<h3>BrickNova AI: Real Estate Investment Assistant</h3>
+<p><strong>Problem:</strong> Real estate investors need to quickly compare Miami (Brickell) condo units, understand ROI projections, and calculate total cost-to-own across multiple buildings.</p>
+<p><strong>What I Built:</strong> Conversational assistant with a Google ADK + Gemini orchestrator that routes queries to specialist agents using tool calling for unit search, building comparison, ROI modeling, and cost-to-own calculations.</p>
+<p><strong>Stack:</strong> Google ADK, Gemini 2.5 Flash, Next.js 15, TypeScript, FastAPI, Supabase, Railway.</p>
 
-<h3>Intrinzi</h3>
-<p>Data-driven platform for discovering undervalued stocks using fundamental analysis. Automated financial data processing and valuation modeling.</p>
+<h2>AI × Transportation</h2>
 
-<h3>AdOn</h3>
-<p>Digital advertising marketplace connecting advertisers with publishers. Built programmatic ad-serving infrastructure.</p>
+<h3>LLM-Driven Four-Step Travel Demand Model</h3>
+<p><strong>Problem:</strong> Traditional travel demand models require extensive calibration of hundreds of coefficients. Can LLMs replace estimated parameters with reasoning-based decision-making?</p>
+<p><strong>What I Built:</strong> A four-step travel demand model where trip generation, distribution, and mode choice are answered by an LLM decision engine instead of calibrated coefficients. Validated on Sioux Falls against ACS, LODES, NHTS, and traffic counts; compared with a conventional gravity/MNL model (67 coefficients) under transit, parking, and capacity policy scenarios. Engineered reproducible experiments with hash-keyed SQLite request cache, cost guard with dry-run, placebo-controlled prompt-framing tests, temperature scaling, and calibration ladder. Abstract submitted to Modeling Mobility (MoMo) 2027.</p>
+<p><strong>Stack:</strong> Python, LLM API (temperature scaling, structured outputs), SQLite, pytest (26 test files, 171 commits).</p>
 
-<h3>YourD3</h3>
-<p>Personalized dietary supplement recommendations based on individual health data and nutritional science.</p>
+<h3>tdm-platform: Closed-Loop Travel Demand Model on Serverless Compute</h3>
+<p><strong>Problem:</strong> Activity-based travel models are compute-intensive, region-specific, and expensive to run. How can we make them portable and affordable?</p>
+<p><strong>What I Built:</strong> Region-agnostic platform combining ActivitySim and AequilibraE (Frank-Wolfe user-equilibrium assignment with skim feedback) that builds a model region from open OSM/TIGER data. Demo region: 168 TAZs, 73k links. Runs on Modal serverless compute for approximately $0.07 per scenario.</p>
+<p><strong>Stack:</strong> Python, ActivitySim, AequilibraE, OSM/TIGER data processing, Modal serverless.</p>
 
-<h2>Research & Modeling</h2>
+<h3>travel-mcp-server: MCP Server for Travel Model Outputs</h3>
+<p><strong>Problem:</strong> LLM applications need structured access to travel model outputs (trip tables, skims, network data) stored in domain-specific formats like Parquet and OMX.</p>
+<p><strong>What I Built:</strong> Model Context Protocol (MCP) server with 8 tools that let LLM clients query travel model outputs using DuckDB SQL, pull trip statistics and skims, and generate charts. Packaged in Docker for easy deployment.</p>
+<p><strong>Stack:</strong> Python, MCP, DuckDB, Parquet, OMX, Docker.</p>
 
-<h3>Transportation Demand Modeling</h3>
-<p>8 years of complex systems modeling at RSG, building large-scale simulations of how millions of people make travel decisions. Discrete choice models, behavioral forecasting, and traffic engineering across multiple metropolitan regions.</p>
+<h3>GTFS Transit Feed Comparison Tool</h3>
+<p><strong>Problem:</strong> Transit agencies need to identify changes between GTFS feed versions (routes, stops, trips, service patterns) for model updates and service planning.</p>
+<p><strong>What I Built:</strong> Automated comparison tool that ingests two GTFS feeds and produces detailed change reports.</p>
+<p><strong>Stack:</strong> Python, GTFS parsing.</p>
+<p><a href="https://github.com/sumitbindra/GTFS_comparison">View on GitHub</a></p>
 
-<h3>Academic Research</h3>
-<p>Choice modeling and transportation systems research at the University of Connecticut, University of Gothenburg, and ETH Zurich.</p>
+<h2>Other AI Applications</h2>
+
+<h3>Answr: Conversational Surveys & Interviews</h3>
+<p><strong>Problem:</strong> Traditional surveys have low completion rates and miss nuance. How can LLMs conduct adaptive interviews that probe deeper based on responses?</p>
+<p><strong>What I Built:</strong> AI survey and interview applications for employee satisfaction, customer feedback, and transit-rider research. Built on OpenAI Assistants API and LlamaIndex workflows with LLM-driven follow-up probing, analysis dashboards, and WebRTC voice versions. Delivered a multilingual (English/Spanish) HR project management app within weeks of the Assistants API's November 2023 launch.</p>
+<p><strong>Stack:</strong> OpenAI Assistants API, LlamaIndex, WebRTC, multilingual support.</p>
