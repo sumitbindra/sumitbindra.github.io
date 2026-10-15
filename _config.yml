@@ -56,3 +56,4 @@ exclude:
   - "*.gemspec"
   - node_modules
   - vendor
+  - screenshots
