@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About
+description: Applied AI engineer with 15 years of transportation data modeling experience. Building production-grade multi-agent LLM and voice AI systems.
 ---
 
 I'm an applied AI engineer who builds production-grade multi-agent LLM and voice AI systems, backed by 15 years of experience in transportation data modeling and forecasting. I ship end-to-end AI applications—from multi-agent orchestration platforms to real-time voice agents—using Python, TypeScript, and modern AI frameworks.
