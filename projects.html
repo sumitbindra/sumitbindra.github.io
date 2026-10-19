@@ -9,9 +9,69 @@ description: Selected AI and data modeling projects including multi-agent LLM sy
 <h2>Multi-Agent LLM Systems</h2>
 
 <h3>ouroAI: Multi-Agent CRM Automation Platform</h3>
-<p><strong>Problem:</strong> Real-estate and sales teams need intelligent automation that can handle SMS, email, WhatsApp, and voice outreach while maintaining context and knowing when to escalate to humans.</p>
-<p><strong>What I Built:</strong> A Gemini-orchestrated multi-agent platform where four specialized tool-calling agents (query, outreach, sync, reporting) coordinate across communication channels. Replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labeled conversations, achieving 88.9% accuracy on a held-out validation set. Implemented hybrid retrieval (Gemini embeddings + BM25) over CRM contacts and per-account knowledge bases synced to voice agents.</p>
-<p><strong>Stack:</strong> React, TypeScript, FastAPI, Supabase (Postgres with pgvector, Auth, RLS multi-tenancy), Docker, Railway. 238 commits, 28+ PRs, 50+ pytest files plus Vitest and Playwright E2E tests.</p>
+
+<p><strong>Problem</strong></p>
+<p>Real-estate and sales teams need intelligent automation that can:</p>
+<ul>
+  <li>Handle SMS, email, WhatsApp, and AI voice outreach</li>
+  <li>Maintain context across channels</li>
+  <li>Know when to escalate to humans</li>
+  <li>Sync with CRM systems</li>
+</ul>
+
+<p><strong>Architecture</strong></p>
+<p>A Gemini orchestrator routes work to four specialized tool-calling agents:</p>
+
+<div style="border: 1px solid #ddd; padding: 20px; margin: 20px 0; font-family: monospace; font-size: 0.9em; background: #fafafa;">
+  <div style="text-align: center; margin-bottom: 15px; font-weight: bold; font-size: 1.1em;">
+    Gemini Orchestrator
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px;">
+    <div style="border: 1px solid #999; padding: 10px; min-width: 120px; text-align: center; background: white;">
+      Query Agent<br>
+      <span style="font-size: 0.85em; color: #666;">searches CRM</span>
+    </div>
+    <div style="border: 1px solid #999; padding: 10px; min-width: 120px; text-align: center; background: white;">
+      Outreach Agent<br>
+      <span style="font-size: 0.85em; color: #666;">sends messages</span>
+    </div>
+    <div style="border: 1px solid #999; padding: 10px; min-width: 120px; text-align: center; background: white;">
+      Sync Agent<br>
+      <span style="font-size: 0.85em; color: #666;">updates CRM</span>
+    </div>
+    <div style="border: 1px solid #999; padding: 10px; min-width: 120px; text-align: center; background: white;">
+      Reporting Agent<br>
+      <span style="font-size: 0.85em; color: #666;">analytics</span>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;">
+    ↓ integrations ↓
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin-top: 10px;">
+    <div style="padding: 5px 10px; background: white; border: 1px solid #ccc;">SMS/WhatsApp (Twilio)</div>
+    <div style="padding: 5px 10px; background: white; border: 1px solid #ccc;">Email (Resend)</div>
+    <div style="padding: 5px 10px; background: white; border: 1px solid #ccc;">Voice (ElevenLabs)</div>
+    <div style="padding: 5px 10px; background: white; border: 1px solid #ccc;">→ Human Escalation</div>
+  </div>
+</div>
+
+<p><strong>Retrieval:</strong> Hybrid Gemini embeddings + BM25 over CRM contacts and per-account knowledge bases synced to voice agents.</p>
+
+<p><strong>Evaluation</strong></p>
+<p>Replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline:</p>
+<ul>
+  <li><strong>Three decisions:</strong> channel choice, escalation, reply generation</li>
+  <li><strong>Training:</strong> BootstrapFewShot on 89 labeled conversations</li>
+  <li><strong>Result:</strong> 88.9% accuracy on held-out validation set</li>
+</ul>
+<p><em>Why this matters:</em> Measurable, repeatable quality instead of prompt guesswork. The DSPy-optimized pipeline produces consistent results that can be tracked, debugged, and improved—unlike manually tuned prompts that drift over time.</p>
+
+<p><strong>Results and Engineering</strong></p>
+<ul>
+  <li><strong>Scale:</strong> 238 commits, 28+ pull requests</li>
+  <li><strong>Stack:</strong> React, TypeScript, FastAPI, Supabase (Postgres + pgvector, Auth, RLS multi-tenancy), Docker, Railway</li>
+  <li><strong>Testing:</strong> 50+ pytest files, Vitest, Playwright E2E tests</li>
+</ul>
 
 <h3>AI Voice Call Scheduler with ElevenLabs & Twilio</h3>
 <p><strong>Problem:</strong> Businesses need intelligent voice agents that can handle inbound and outbound calls, schedule appointments, handle voicemails, and sync with CRMs—without human intervention for routine calls.</p>

@@ -84,9 +84,14 @@ Selected AI and data modeling projects demonstrating end-to-end system design, i
 ### Multi-Agent LLM Systems
 
 #### ouroAI: Multi-Agent CRM Automation Platform
+
 **Problem:** Real-estate and sales teams need intelligent automation that can handle SMS, email, WhatsApp, and voice outreach while maintaining context and knowing when to escalate to humans.
 
-**What I Built:** A Gemini-orchestrated multi-agent platform where four specialized tool-calling agents (query, outreach, sync, reporting) coordinate across communication channels. Replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labeled conversations, achieving 88.9% accuracy on a held-out validation set. Implemented hybrid retrieval (Gemini embeddings + BM25) over CRM contacts and per-account knowledge bases synced to voice agents.
+**Architecture:** A Gemini orchestrator routes work to four specialized tool-calling agents (query, outreach, sync, reporting) that coordinate across communication channels. The query agent searches CRM, outreach agent sends messages, sync agent updates CRM, and reporting agent provides analytics. These agents integrate with SMS/WhatsApp (Twilio), email (Resend), voice (ElevenLabs), and escalate to humans when needed.
+
+**Retrieval:** Hybrid Gemini embeddings + BM25 over CRM contacts and per-account knowledge bases synced to voice agents.
+
+**Evaluation:** Replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline (channel choice, escalation, reply generation) optimized with BootstrapFewShot on 89 labeled conversations, achieving 88.9% accuracy on a held-out validation set. This provides measurable, repeatable quality instead of prompt guesswork—consistent results that can be tracked, debugged, and improved.
 
 **Stack:** React, TypeScript, FastAPI, Supabase (Postgres with pgvector, Auth, RLS multi-tenancy), Docker, Railway. 238 commits, 28+ PRs, 50+ pytest files plus Vitest and Playwright E2E tests.
 
