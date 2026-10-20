@@ -1,0 +1,45 @@
+.selected-work {
+  margin: 4em auto;
+
+  .work-items {
+    display: grid;
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+
+  .work-item {
+    background: white;
+    padding: 1.5em;
+    box-shadow: 12px 18px 24px rgba(darken($brand-color, 50%), .1);
+    border-radius: 4px;
+
+    h3 {
+      font-size: 1.25em;
+      margin: 0 0 0.5em 0;
+      text-align: left;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          background: $highlight;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: $on-tablet) {
+    .work-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
