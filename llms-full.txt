@@ -4,6 +4,18 @@
 
 I'm an applied AI engineer who builds production-grade multi-agent LLM and voice AI systems, backed by 15 years of experience in transportation data modeling and forecasting. I ship end-to-end AI applications—from multi-agent orchestration platforms to real-time voice agents—using Python, TypeScript, and modern AI frameworks.
 
+### Home Page
+
+The home page includes a "Selected Work" section highlighting four key project areas:
+
+1. **Document Intelligence (CICA):** Structured extraction from construction bid forms, specs and proposals using OpenAI/Gemini with Pydantic/JSON-schema outputs, LlamaIndex RAG, Azure Document Intelligence and Reducto parsing. Flags financial, schedule, scope and legal discrepancies, with an LLM-judged eval harness.
+
+2. **Multi-Agent CRM Automation (ouroAI):** A Gemini orchestrator routes work to four tool-calling sub-agents across SMS, email, WhatsApp and voice, with escalation to humans. A DSPy pipeline optimized on 89 labelled conversations reached 88.9% on a held-out validation set, backed by an LLM eval suite.
+
+3. **Voice AI Agents:** Inbound and outbound voice agents on ElevenLabs Conversational AI over Twilio, with signature-verified FastAPI webhooks for scheduling and CRM booking.
+
+4. **Transportation Data and Modeling:** Co-developed TransLink's regional trip- and activity-based travel demand model in Python; built data pipelines in Python and Databricks for a large household travel survey program; also built an MCP server that lets LLM clients query travel model outputs.
+
 ### Current Work
 
 #### TransLink (Metro Vancouver, BC)
