@@ -108,11 +108,22 @@ Selected AI and data modeling projects demonstrating end-to-end system design, i
 **Stack:** React, TypeScript, FastAPI, Supabase (Postgres with pgvector, Auth, RLS multi-tenancy), Docker, Railway. 238 commits, 28+ PRs, 50+ pytest files plus Vitest and Playwright E2E tests.
 
 #### AI Voice Call Scheduler with ElevenLabs & Twilio
+
 **Problem:** Businesses need intelligent voice agents that can handle inbound and outbound calls, schedule appointments, handle voicemails, and sync with CRMs—without human intervention for routine calls.
 
-**What I Built:** Inbound and outbound voice agents on ElevenLabs Conversational AI integrated with Twilio phone numbers. Signature-verified FastAPI webhooks handle scheduling logic, voicemail auto-reschedule, and CRM booking via server tools. Gemini analyzes each transcript for summary, sentiment, action items, and reschedule intent.
+**Architecture:** Inbound and outbound voice agents on ElevenLabs Conversational AI communicate over Twilio phone numbers. When the agent needs to perform actions—schedule an appointment, book into a CRM, or handle a voicemail—it invokes server tools that trigger signature-verified webhooks to a FastAPI backend.
 
-**Stack:** ElevenLabs Conversational AI, Twilio, FastAPI, Gemini, webhook authentication, CRM integrations.
+The call flow: Phone call (Twilio) → ElevenLabs agent (Conversational AI) → Server tool invocation → Webhook endpoint (FastAPI) → Signature verification (ElevenLabs secret) → Scheduling logic, CRM booking, or voicemail handler → Auto-reschedule on voicemail.
+
+Signature verification ensures only authentic agent-invoked actions are executed. ElevenLabs signs each webhook payload with a secret; the FastAPI handler verifies the signature before processing, preventing forged requests from creating appointments or modifying CRM data.
+
+**Post-Call Analysis:** After each call completes, Gemini processes the full transcript to extract summary (key points discussed), sentiment (caller tone and satisfaction), action items (follow-up tasks), and reschedule intent. This structured analysis enables automated follow-up workflows, quality monitoring, and CRM enrichment without manual review.
+
+**Integration with ouroAI:** This voice agent architecture integrates with ouroAI's multi-channel automation platform. Per-account knowledge bases are synced to the voice agents so they can reference account-specific context during calls. The ouroAI orchestrator's outreach agent can initiate outbound voice calls, and escalates to humans when needed.
+
+**Related Product:** RealEstateISA (realestateisa.ai) is a production application built on ouroAI that includes this voice agent architecture, a Gemini-powered sales call grader, and integrations with Follow Up Boss and GoHighLevel CRM systems.
+
+**Stack:** ElevenLabs Conversational AI (server tools), Twilio (phone numbers), FastAPI (webhook endpoints), Gemini (transcript analysis), cryptographic signature verification, Follow Up Boss CRM integration.
 
 #### CICA: Construction & Insurance Document AI
 **Problem:** Commercial insurance underwriting and construction bidding require extracting structured data from complex documents (bid forms, specifications, proposals) and identifying financial, schedule, scope, and legal discrepancies.
