@@ -11,7 +11,7 @@ Currently: Project Manager & Senior Modeler at TransLink (Metro Vancouver transi
 The home page includes a "Selected Work" section highlighting:
 - **Document Intelligence (CICA):** Structured extraction from construction documents using OpenAI/Gemini with Pydantic/JSON-schema outputs, LlamaIndex RAG, Azure Document Intelligence and Reducto parsing; flags discrepancies with LLM-judged eval harness
 - **Multi-Agent CRM Automation (ouroAI):** Gemini orchestrator routing work to four tool-calling sub-agents across SMS, email, WhatsApp and voice; DSPy pipeline reaching 88.9% accuracy on held-out validation set
-- **Voice AI Agents:** Inbound and outbound voice agents on ElevenLabs Conversational AI over Twilio with signature-verified FastAPI webhooks for scheduling and CRM booking
+- **Voice AI Agents:** Inbound and outbound voice agents on ElevenLabs Conversational AI over Twilio with signature-verified FastAPI webhooks for scheduling and CRM booking; Gemini analyzes call transcripts for summary, sentiment, and action items
 - **Transportation Data and Modeling:** Co-developed TransLink's regional travel demand model in Python; built data pipelines in Python and Databricks; created MCP server for LLM clients to query travel model outputs
 
 ## Sections
