@@ -4,7 +4,7 @@
 
 I build production-grade multi-agent LLM and voice AI applications backed by 15 years of transportation and data modeling experience. I ship end-to-end AI systems—from Gemini-orchestrated multi-agent platforms with tool calling and RAG to ElevenLabs voice agents—using Python, TypeScript, FastAPI, and modern AI frameworks.
 
-Currently: Project Manager & Senior Modeler at TransLink (Metro Vancouver transit authority) and building AI agent applications.
+Currently: Project Manager & Senior Transportation Data Modeler at TransLink (Metro Vancouver transit authority) and building AI agent applications.
 
 ## Home Page
 

@@ -1,0 +1,59 @@
+// Home page improvements: contrast, spacing, and link prominence
+// The .intro section only exists on index.html
+// The .site-masthead h2 is also only on index.html (other pages don't use this layout)
+
+// Improved contrast for home page tagline
+// Using darker color for better readability against yellow background
+// #2a2a1f provides 9.6:1 contrast ratio against #fede00 (exceeds WCAG AAA 7:1)
+.site-masthead h2 {
+  color: #2a2a1f;
+  font-weight: 500;
+}
+
+// Improved spacing and typography for intro section (only on index.html)
+.intro {
+  p {
+    margin-bottom: 1.75em;
+    
+    &:last-child {
+      margin-bottom: 2em;
+    }
+  }
+  
+  // Links section styling - make prominent but clean
+  p:last-child {
+    margin-top: 2.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid rgba(11, 4, 4, 0.15);
+    
+    a {
+      display: inline-block;
+      font-weight: 600;
+      padding: 0.35em 0.75em;
+      margin: 0.25em 0.35em;
+      text-decoration: none;
+      border: 1.5px solid $text-color;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+      
+      &:hover,
+      &:focus {
+        background: $text-color;
+        color: $brand-color;
+        transform: translateY(-1px);
+      }
+      
+      @media (max-width: $on-bigphone) {
+        display: inline-block;
+        margin: 0.3em 0.2em;
+        padding: 0.4em 0.65em;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+// Add spacing before Selected Work section
+.selected-work {
+  margin-top: 4em;
+}
