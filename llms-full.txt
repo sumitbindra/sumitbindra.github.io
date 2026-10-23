@@ -16,6 +16,20 @@ The home page includes a "Selected Work" section highlighting four key project a
 
 4. **Transportation Data and Modeling:** Co-developed TransLink's regional trip- and activity-based travel demand model in Python; built data pipelines in Python and Databricks for a large household travel survey program; also built an MCP server that lets LLM clients query travel model outputs.
 
+The home page also includes a "How I Build AI Systems" section highlighting reliability practices used when shipping LLM and agent systems:
+
+- **Evals over guesswork:** In ouroAI, replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labelled conversations, reaching 88.9% on a held-out validation set, backed by an LLM eval suite and side-by-side comparison runner.
+
+- **LLM-judged eval harness:** For CICA document extraction (Pydantic/JSON-schema structured outputs), built an eval harness measuring extraction accuracy and discrepancy detection.
+
+- **Tool integrations:** Built travel-mcp-server, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL. For ElevenLabs voice agents, use server tools that call signature-verified FastAPI webhooks.
+
+- **Humans in the loop:** ouroAI agents escalate to humans when needed.
+
+- **Reproducible experiments:** The LLM-driven four-step travel demand model uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.
+
+- **Testing:** ouroAI has 50+ pytest files plus Vitest and Playwright end-to-end tests.
+
 ### Current Work
 
 #### TransLink (Metro Vancouver, BC)

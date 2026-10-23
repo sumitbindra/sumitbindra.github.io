@@ -53,6 +53,24 @@ description: Applied AI Engineer building multi-agent LLM and voice AI systems. 
     </div>
   </section>
 
+  <section class="how-i-build">
+    <h2 class="content-title divided">How I Build AI Systems</h2>
+    
+    <ul>
+      <li><strong>Evals over guesswork:</strong> In <a href="/projects#ouroai">ouroAI</a>, I replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labelled conversations, reaching 88.9% on a held-out validation set, backed by an LLM eval suite and side-by-side comparison runner.</li>
+      
+      <li><strong>LLM-judged eval harness:</strong> For <a href="/projects#cica">CICA document extraction</a>, I built an eval harness using Pydantic/JSON-schema structured outputs that measures extraction accuracy and discrepancy detection.</li>
+      
+      <li><strong>Tool integrations:</strong> I built <a href="/projects#travel-mcp-server">travel-mcp-server</a>, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL. For <a href="/projects#voice-scheduler">ElevenLabs voice agents</a>, I use server tools that call signature-verified FastAPI webhooks.</li>
+      
+      <li><strong>Humans in the loop:</strong> <a href="/projects#ouroai">ouroAI agents</a> escalate to humans when needed.</li>
+      
+      <li><strong>Reproducible experiments:</strong> The <a href="/projects#llm-four-step-model">LLM-driven four-step travel demand model</a> uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.</li>
+      
+      <li><strong>Testing:</strong> <a href="/projects#ouroai">ouroAI</a> has 50+ pytest files plus Vitest and Playwright end-to-end tests.</li>
+    </ul>
+  </section>
+
   <h1 class="content-title divided">Recent Posts</h1>
 
   <ul class="post-list">
