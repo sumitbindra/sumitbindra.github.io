@@ -166,7 +166,7 @@ description: Selected AI and data modeling projects including multi-agent LLM sy
 
 <h2 id="ai-transportation">AI × Transportation</h2>
 
-<h3>LLM-Driven Four-Step Travel Demand Model</h3>
+<h3 id="llm-four-step-model">LLM-Driven Four-Step Travel Demand Model</h3>
 <p><strong>Problem:</strong> Traditional travel demand models require extensive calibration of hundreds of coefficients. Can LLMs replace estimated parameters with reasoning-based decision-making?</p>
 <p><strong>What I Built:</strong> A four-step travel demand model where trip generation, distribution, and mode choice are answered by an LLM decision engine instead of calibrated coefficients. Validated on Sioux Falls against ACS, LODES, NHTS, and traffic counts; compared with a conventional gravity/MNL model (67 coefficients) under transit, parking, and capacity policy scenarios. Engineered reproducible experiments with hash-keyed SQLite request cache, cost guard with dry-run, placebo-controlled prompt-framing tests, temperature scaling, and calibration ladder. Abstract submitted to Modeling Mobility (MoMo) 2027.</p>
 <p><strong>Stack:</strong> Python, LLM API (temperature scaling, structured outputs), SQLite, pytest (26 test files, 171 commits).</p>
@@ -176,7 +176,7 @@ description: Selected AI and data modeling projects including multi-agent LLM sy
 <p><strong>What I Built:</strong> Region-agnostic platform combining ActivitySim and AequilibraE (Frank-Wolfe user-equilibrium assignment with skim feedback) that builds a model region from open OSM/TIGER data. Demo region: 168 TAZs, 73k links. Runs on Modal serverless compute for approximately $0.07 per scenario.</p>
 <p><strong>Stack:</strong> Python, ActivitySim, AequilibraE, OSM/TIGER data processing, Modal serverless.</p>
 
-<h3>travel-mcp-server: MCP Server for Travel Model Outputs</h3>
+<h3 id="travel-mcp-server">travel-mcp-server: MCP Server for Travel Model Outputs</h3>
 <p><strong>Problem:</strong> LLM applications need structured access to travel model outputs (trip tables, skims, network data) stored in domain-specific formats like Parquet and OMX.</p>
 <p><strong>What I Built:</strong> Model Context Protocol (MCP) server with 8 tools that let LLM clients query travel model outputs using DuckDB SQL, pull trip statistics and skims, and generate charts. Packaged in Docker for easy deployment.</p>
 <p><strong>Stack:</strong> Python, MCP, DuckDB, Parquet, OMX, Docker.</p>

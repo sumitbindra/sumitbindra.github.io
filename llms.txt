@@ -14,6 +14,14 @@ The home page includes a "Selected Work" section highlighting:
 - **Voice AI Agents:** Inbound and outbound voice agents on ElevenLabs Conversational AI over Twilio with signature-verified FastAPI webhooks for scheduling and CRM booking; Gemini analyzes call transcripts for summary, sentiment, and action items
 - **Transportation Data and Modeling:** Co-developed TransLink's regional travel demand model in Python; built data pipelines in Python and Databricks; created MCP server for LLM clients to query travel model outputs
 
+The home page also includes a "How I Build AI Systems" section highlighting reliability practices:
+- **Evals over guesswork:** In ouroAI, replaced hand-written 3-call prompt chain with DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labelled conversations, reaching 88.9% on held-out validation set, backed by LLM eval suite and side-by-side comparison runner
+- **LLM-judged eval harness:** For CICA document extraction, built eval harness using Pydantic/JSON-schema structured outputs measuring extraction accuracy and discrepancy detection
+- **Tool integrations:** Built travel-mcp-server, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL; for ElevenLabs voice agents, use server tools that call signature-verified FastAPI webhooks
+- **Humans in the loop:** ouroAI agents escalate to humans when needed
+- **Reproducible experiments:** LLM-driven four-step travel demand model uses hash-keyed SQLite request cache, cost guard with dry-run, and placebo-controlled prompt-framing tests
+- **Testing:** ouroAI has 50+ pytest files plus Vitest and Playwright end-to-end tests
+
 ## Sections
 
 - [About](/about.html): Detailed experience, technical background, education, and publications
