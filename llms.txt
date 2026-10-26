@@ -6,6 +6,8 @@ I build production-grade multi-agent LLM and voice AI applications backed by 15 
 
 Currently: Project Manager & Senior Transportation Data Modeler at TransLink (Metro Vancouver transit authority) and building AI agent applications.
 
+Hands-on applied AI: multi-agent systems with tool calling, RAG pipelines, ElevenLabs voice agents and MCP servers, built daily with Claude Code, Codex and Cursor.
+
 ## Home Page
 
 The home page includes a "Selected Work" section highlighting:
