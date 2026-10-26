@@ -16,9 +16,13 @@ layout: default
     </h1>
   {% endif %}
 
+  {% include series-navigation.html %}
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  {% include series-navigation.html %}
 
   <div class="post-meta">
     {% if page.author %}

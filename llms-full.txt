@@ -30,6 +30,10 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 
 - **Testing:** ouroAI has 50+ pytest files plus Vitest and Playwright end-to-end tests.
 
+### Blog Series
+
+**Looking back** (/looking-back/) — A retrospective series from 2026, looking back at about two years of hands-on applied AI projects from 2024-2026 and what changed in AI along the way. The series covers structured extraction, multi-agent orchestration, voice AI, and evaluation frameworks as these technologies matured.
+
 ### Current Work
 
 #### TransLink (Metro Vancouver, BC)
