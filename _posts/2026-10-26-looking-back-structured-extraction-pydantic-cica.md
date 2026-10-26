@@ -6,11 +6,11 @@ series: looking-back
 series_part: 10
 ---
 
-This is a look back, written in 2026, at work from spring 2025—specifically March to June of that year. By early 2025, major model APIs had added the ability to constrain output to a JSON schema. OpenAI had introduced structured outputs in August 2024, and Gemini offered response schemas. That capability made schema-first extraction practical in a way it hadn't been before, and CICA was built around it.
+This is a look back, written in 2026, at work from spring 2025—specifically March to June of that year. By early 2025, major model APIs had added the ability to constrain output to a JSON schema. OpenAI had introduced structured outputs in August 2024, and Gemini's API supported response schemas. That capability made schema-first extraction practical in a way it hadn't been before, and CICA was built around it.
 
 ## The Problem
 
-Commercial insurance underwriting and construction bidding both involve comparing complex documents against each other. A specification says one thing about project scope, schedule, or pricing. A proposal or bid form says something else. The question is whether they match, and if not, whether the difference matters.
+Construction bidding involves comparing complex documents against each other. A specification says one thing about project scope, schedule, or pricing. A proposal or bid form says something else. The question is whether they match, and if not, whether the difference matters.
 
 I built CICA to extract structured information from these documents—bid forms, ground truth proposals, specifications—and identify discrepancies. The discrepancies CICA looked for were financial, schedule, scope-related, and legal. The goal wasn't to make final decisions but to flag potential issues that someone needed to review.
 
@@ -58,11 +58,11 @@ The `difference_flag` field was the key one. When set to true, it meant the syst
 
 Early on, I made a choice that seemed counterintuitive: ask one question at a time instead of sending all the questions together. The README for CICA_API_v1 says it plainly: "Sending LLM one question at a time seems to perform better than sending all questions together."
 
-I hedged that statement because I didn't have rigorous proof, just observation. But in practice, the single-question approach seemed to reduce errors. It gave the model less to juggle and made the extraction process easier to debug when something went wrong. There's a trade-off—more API calls, higher latency—but for the accuracy I needed, it was worth it.
+I hedged that statement because I didn't have rigorous proof, just observation. My observation was that it performed better, and it also made failures easier to debug. The trade-off is more API calls and higher latency.
 
 ## Mixing OpenAI and Gemini
 
-CICA used both OpenAI and Gemini. There was an environment flag that let me choose which model handled which part of the pipeline. I used one for general response extraction and the other for structured extraction. Mixing models wasn't about philosophical preference; it was about using what worked best for each task based on testing.
+CICA used both OpenAI and Gemini. There was an environment flag that let me choose which model handled which part of the pipeline. I used one for general response extraction and the other for structured extraction.
 
 ## Parsing and Retry Logic
 
@@ -74,7 +74,7 @@ This kind of plumbing—retries, error handling, fallback paths—took more time
 
 The test harness was built with pytest. The tests compared outputs against expected results and used an LLM to judge whether the extraction was correct. This was necessary because the answers weren't always exact matches—they might be phrased differently but mean the same thing.
 
-The test configuration was stored in a file called `tests_input.json`, and the results went into `test_results.json`, with pass/fail verdicts and explanations. Testing wasn't an afterthought; it was part of the development loop from the start. Every change that affected extraction needed to pass the test suite before it shipped.
+The test configuration was stored in a file called `tests_input.json`, and the results went into `test_results.json`, with pass/fail verdicts and explanations.
 
 ## What I Learned
 

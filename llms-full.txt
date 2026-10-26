@@ -144,7 +144,7 @@ Signature verification ensures only authentic agent-invoked actions are executed
 **Stack:** ElevenLabs Conversational AI (server tools), Twilio (phone numbers), FastAPI (webhook endpoints), Gemini (transcript analysis), cryptographic signature verification, Follow Up Boss CRM integration.
 
 #### CICA: Construction & Insurance Document AI
-**Problem:** Commercial insurance underwriting and construction bidding require extracting structured data from complex documents (bid forms, specifications, proposals) and identifying financial, schedule, scope, and legal discrepancies.
+**Problem:** Construction bidding requires extracting structured data from complex documents (bid forms, specifications, proposals) and identifying financial, schedule, scope, and legal discrepancies.
 
 **What I Built:** Structured extraction pipeline using OpenAI/Gemini with Pydantic/JSON-schema validation, LlamaIndex RAG, Azure Document Intelligence, and Reducto parsing. Built an LLM-judged evaluation harness to measure extraction accuracy and discrepancy detection across document types.
 
