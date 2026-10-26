@@ -30,6 +30,10 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 
 - **Testing:** ouroAI has 50+ pytest files plus Vitest and Playwright end-to-end tests.
 
+### Blog Series
+
+**Looking back** (/looking-back/) — A retrospective series from 2026, looking back at about two years of hands-on applied AI projects from 2024-2026 and what changed in AI along the way. The series covers structured extraction, multi-agent orchestration, voice AI, and evaluation frameworks as these technologies matured.
+
 ### Current Work
 
 #### TransLink (Metro Vancouver, BC)
@@ -140,7 +144,7 @@ Signature verification ensures only authentic agent-invoked actions are executed
 **Stack:** ElevenLabs Conversational AI (server tools), Twilio (phone numbers), FastAPI (webhook endpoints), Gemini (transcript analysis), cryptographic signature verification, Follow Up Boss CRM integration.
 
 #### CICA: Construction & Insurance Document AI
-**Problem:** Commercial insurance underwriting and construction bidding require extracting structured data from complex documents (bid forms, specifications, proposals) and identifying financial, schedule, scope, and legal discrepancies.
+**Problem:** Construction bidding requires extracting structured data from complex documents (bid forms, specifications, proposals) and identifying financial, schedule, scope, and legal discrepancies.
 
 **What I Built:** Structured extraction pipeline using OpenAI/Gemini with Pydantic/JSON-schema validation, LlamaIndex RAG, Azure Document Intelligence, and Reducto parsing. Built an LLM-judged evaluation harness to measure extraction accuracy and discrepancy detection across document types.
 

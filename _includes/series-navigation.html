@@ -1,0 +1,37 @@
+{% if page.series %}
+<div class="series-navigation">
+  <div class="series-label">
+    Part {{ page.series_part }} of 20 in the <a href="/looking-back/">{{ page.series | replace: "-", " " | capitalize }}</a> series
+  </div>
+  
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "series_part" %}
+  {% assign current_part = page.series_part %}
+  {% assign prev_post = nil %}
+  {% assign next_post = nil %}
+  
+  {% for post in series_posts %}
+    {% if post.series_part < current_part %}
+      {% assign prev_post = post %}
+    {% endif %}
+    {% if post.series_part > current_part and next_post == nil %}
+      {% assign next_post = post %}
+    {% endif %}
+  {% endfor %}
+  
+  <div class="series-links">
+    {% if prev_post %}
+      <a href="{{ prev_post.url }}" class="series-prev">← Part {{ prev_post.series_part }}</a>
+    {% else %}
+      <span class="series-prev series-disabled">← Part {{ current_part | minus: 1 }}</span>
+    {% endif %}
+    
+    <a href="/looking-back/" class="series-index">Series Index</a>
+    
+    {% if next_post %}
+      <a href="{{ next_post.url }}" class="series-next">Part {{ next_post.series_part }} →</a>
+    {% else %}
+      <span class="series-next series-disabled">Part {{ current_part | plus: 1 }} →</span>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
