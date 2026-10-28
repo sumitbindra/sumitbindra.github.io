@@ -10,7 +10,7 @@ I'm an applied AI engineer who builds production-grade multi-agent LLM and voice
 ## Current Work
 
 ### TransLink (Metro Vancouver, BC)
-**Project Manager & Senior Transportation Data Modeler** | September 2019 – Present
+**Project Manager & Senior Transportation Data Modeler** | September&nbsp;2019&nbsp;–&nbsp;Present
 
 - Co-developed TransLink's regional trip- and activity-based travel demand model in Python; delivered ridership forecasts for the Surrey-Langley SkyTrain extension and station- and line-level forecasts for the entire Metro Vancouver transit system
 - Lead a multi-million-dollar household trip diary and screenline data program covering sensitive personal information from 65% of the region's households, owning the data flow from collection through model calibration and estimation
@@ -19,7 +19,7 @@ I'm an applied AI engineer who builds production-grade multi-agent LLM and voice
 - Implementing LLMs and other innovative solutions in modeling and customer service
 
 ### Independent AI Application Development
-**Applied AI Engineer** | January 2021 – Present
+**Applied AI Engineer** | January&nbsp;2021&nbsp;–&nbsp;Present
 
 Building production-grade multi-agent LLM and voice AI applications:
 
@@ -42,7 +42,7 @@ Partnered with YC founders to translate early ideas into working products, turni
 ## Previous Experience
 
 ### Resource Systems Group Inc. (RSG)
-**Consultant & Data Analyst** | August 2011 – August 2019
+**Consultant & Data Analyst** | August&nbsp;2011&nbsp;–&nbsp;August&nbsp;2019
 
 White River Junction, VT (remote from Vancouver since 2016)
 
@@ -54,10 +54,10 @@ White River Junction, VT (remote from Vancouver since 2016)
 ## Education
 
 **Master of Science, Civil Engineering**  
-University of Connecticut | 2006 – 2007
+University of Connecticut | 2006&nbsp;–&nbsp;2007
 
 **Bachelor of Technology, Civil Engineering**  
-Indian Institute of Technology (IIT) Guwahati, India | 2001 – 2005
+Indian Institute of Technology (IIT) Guwahati, India | 2001&nbsp;–&nbsp;2005
 
 ## Core Competencies
 
