@@ -36,6 +36,12 @@
   text-indent: 0;
 }
 
+@media (min-width: 960px) {
+  .post.about-page > * {
+    max-width: 48rem;
+  }
+}
+
 .post a:hover {
   background: $highlight;
 }
