@@ -6,7 +6,7 @@ series: looking-back
 series_part: 13
 ---
 
-This is a look back, written in 2026, at work from November 2025. By that point, the Model Context Protocol—introduced by Anthropic in late 2024—had become a common way to plug tools and data into LLM clients and IDE agents. It gave applications a standardized interface to domain-specific resources without requiring custom integrations for every client. That standardization made it practical to build once and use everywhere.
+This is a look back, written in 2026, at work from November 2025. By that point, the Model Context Protocol—introduced by Anthropic in late 2024—had become a common way to plug tools and data into LLM clients and IDE agents. It gave applications a standardized interface to domain-specific resources without requiring custom integrations for every client.
 
 ## The Problem
 
@@ -39,15 +39,15 @@ ORDER BY trip_count DESC;
 
 The LLM writes that SQL, invokes `execute_sql` with it, and presents the results in plain language. Or it calls `generate_figure` to turn the results into a chart.
 
-The server runs in Docker, uses stdio mode (communication over standard input/output), and connects to clients like VS Code through a configuration file. The README documents how to add it to `mcp-settings.json` and run it with `docker run -i --rm`.
+The server runs in Docker, uses stdio mode (communication over standard input/output), and connects to MCP clients in VS Code, such as Cline, through a configuration file. The README documents how to add it to `mcp-settings.json` and run it with `docker run -i --rm`.
 
 ## How It Evolved
 
 I built the first version on November 26, 2025. It had 5 analysis tools, synthetic travel data (zones, households, persons, trips stored as CSV files), a YAML data dictionary, Docker packaging, VS Code integration docs, and a test suite with a data generation script. The data was randomly generated for demonstration: 20 zones, 100 households, 250 persons, 800 trips.
 
-The next day, November 27, I made a major update. CSV files were replaced with Parquet for faster loading and smaller file size. I added OMX skim matrices (travel time, distance, cost) and two new tools: `execute_sql` (using DuckDB to query Parquet tables directly) and `query_skim_matrix` (to pull values from the OMX file). That made the server much more flexible—clients could write their own queries instead of being limited to pre-built analysis tools.
+The next day, November 27, I made a major update. CSV files were replaced with Parquet. I added OMX skim matrices (travel time, distance, cost) and two new tools: `execute_sql` (using DuckDB to query Parquet tables directly) and `query_skim_matrix` (to pull values from the OMX file). That made the server much more flexible—clients could write their own queries instead of being limited to pre-built analysis tools.
 
-Later that same day, I added `generate_figure`. Before that, the server could only return data as text or tables. With matplotlib integration, it could produce visual outputs—bar charts of mode split, line charts of travel time by distance, histograms of trip length distribution. The figures are returned as base64-encoded PNGs wrapped in MCP's ImageContent type, so they display inline in the client without needing to write files to disk. I wrote 7 pytest tests to cover each chart type and make sure they rendered correctly.
+Later that same day, I added `generate_figure`. Before that, the server could only return data as text or tables. With matplotlib integration, it could produce visual outputs—bar, line, pie, scatter, or histogram charts, such as a bar chart of mode split. The figures are returned as base64-encoded PNGs wrapped in MCP's ImageContent type, so they display inline in the client without needing to write files to disk. I wrote 7 pytest tests to cover each chart type and make sure they rendered correctly.
 
 ## Why the Data Dictionary Matters
 
@@ -59,7 +59,7 @@ This matters more in travel modeling than in typical databases because the field
 
 ## What I Learned
 
-Building the MCP server taught me that data access is as important as the data itself. Travel models produce valuable outputs, but if only the people who built the model can query them, their usefulness is limited. The MCP protocol made it possible to turn those outputs into something an LLM client could work with, and the data dictionary made the queries reliable.
+Building the MCP server taught me that data access is as important as the data itself. Travel models produce valuable outputs, but if only the people who built the model can query them, their usefulness is limited. The MCP protocol made it possible to turn those outputs into something an LLM client could work with, and the data dictionary gave the LLM the context it needs to write sensible queries.
 
 The synthetic demo data (20 zones, 100 households, 250 persons, 800 trips) was enough to validate the concept and test the tools. Real travel-model outputs are larger and more complex, but the structure is the same: Parquet tables, OMX skims, and a schema that needs to be documented.
 
