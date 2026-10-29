@@ -29,6 +29,7 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 - [About](/about.html): Detailed experience, technical background, education, and publications
 - [Projects](/projects.html): Case studies of multi-agent LLM systems, AI × transportation projects, and voice AI applications
 - [Looking back](/looking-back/): A retrospective series from 2026 on hands-on applied AI projects from 2024-2026
+  - [Part 13: MCP server for travel-model outputs](https://sumitbindra.com/2026/10/29/looking-back-mcp-server-travel-model-outputs.html): November 2025 MCP server, 8 tools, DuckDB SQL over Parquet, OMX skims, matplotlib charts, synthetic demo data
 - [Resume](/assets/resume/Sumit_Bindra_Resume.pdf): Full resume (PDF)
 - [LinkedIn](https://www.linkedin.com/in/sumitbindra/)
 - [GitHub](https://github.com/sumitbindra)
