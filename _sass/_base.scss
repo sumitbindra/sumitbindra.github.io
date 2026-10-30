@@ -132,6 +132,7 @@ figcaption {
   text-transform: uppercase;
   .post-link & {
     padding: .5em 0;
+    color: $text-color;
   }
 }
 
