@@ -36,6 +36,9 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 
 **Looking back** (/looking-back/) — A retrospective series from 2026, looking back at about two years of hands-on applied AI projects from 2024-2026 and what changed in AI along the way. The series covers structured extraction, multi-agent orchestration, voice AI, and evaluation frameworks as these technologies matured.
 
+Posts in the series:
+- [Part 13: MCP server for travel-model outputs](https://sumitbindra.com/2026/10/29/looking-back-mcp-server-travel-model-outputs.html): November 2025 MCP server, 8 tools, DuckDB SQL over Parquet, OMX skims, matplotlib charts, synthetic demo data
+
 ### Current Work
 
 #### TransLink (Metro Vancouver, BC)
