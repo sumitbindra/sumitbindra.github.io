@@ -21,20 +21,33 @@
   }
   
   // Links section styling - make prominent but clean
-  p:last-child {
+  // Using .link-row class for flex layout with separators
+  .link-row {
     margin-top: 2.5em;
     padding-top: 1.5em;
     border-top: 1px solid rgba(11, 4, 4, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 0;
+    align-items: center;
+    justify-content: center;
     
     a {
       display: inline-block;
       font-weight: 600;
       padding: 0.35em 0.75em;
-      margin: 0.25em 0.35em;
       text-decoration: none;
       border: 1.5px solid $text-color;
       border-radius: 3px;
       transition: all 0.2s ease;
+      
+      // Add separator after each link except the last
+      &:not(:last-child)::after {
+        content: "•";
+        display: inline-block;
+        margin: 0 0.6em;
+        font-weight: 400;
+      }
       
       &:hover,
       &:focus {
@@ -44,10 +57,12 @@
       }
       
       @media (max-width: $on-bigphone) {
-        display: inline-block;
-        margin: 0.3em 0.2em;
         padding: 0.4em 0.65em;
         font-size: 0.9em;
+        
+        &:not(:last-child)::after {
+          margin: 0 0.4em;
+        }
       }
     }
   }
