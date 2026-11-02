@@ -28,7 +28,7 @@
     border-top: 1px solid rgba(11, 4, 4, 0.15);
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5em 0;
+    gap: 0.6em 0.75em;
     align-items: center;
     justify-content: center;
     
@@ -41,14 +41,6 @@
       border-radius: 3px;
       transition: all 0.2s ease;
       
-      // Add separator after each link except the last
-      &:not(:last-child)::after {
-        content: "•";
-        display: inline-block;
-        margin: 0 0.6em;
-        font-weight: 400;
-      }
-      
       &:hover,
       &:focus {
         background: $text-color;
@@ -59,10 +51,6 @@
       @media (max-width: $on-bigphone) {
         padding: 0.4em 0.65em;
         font-size: 0.9em;
-        
-        &:not(:last-child)::after {
-          margin: 0 0.4em;
-        }
       }
     }
   }
