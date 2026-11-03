@@ -179,7 +179,7 @@ Signature verification ensures only authentic agent-invoked actions are executed
 **Stack:** Python, ActivitySim, AequilibraE, OSM/TIGER data processing, Modal serverless.
 
 #### travel-mcp-server: MCP Server for Travel Model Outputs
-**Problem:** LLM applications need structured access to travel model outputs (trip tables, skims, network data) stored in domain-specific formats like Parquet and OMX.
+**Problem:** LLM applications need structured access to travel model outputs (trip, person, household and zone tables in Parquet plus OMX skim matrices).
 
 **What I Built:** Model Context Protocol (MCP) server with 8 tools that let LLM clients query travel model outputs using DuckDB SQL, pull trip statistics and skims, and generate charts. Packaged in Docker for easy deployment.
 
