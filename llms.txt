@@ -15,7 +15,7 @@ The home page includes a "Selected Work" section highlighting:
 - **Multi-Agent CRM Automation (ouroAI):** Gemini orchestrator routing work to four tool-calling sub-agents across SMS, email, WhatsApp and voice; DSPy pipeline reaching 88.9% accuracy on held-out validation set
 - **Voice AI Agents:** Inbound and outbound voice agents on ElevenLabs Conversational AI over Twilio with signature-verified FastAPI webhooks for scheduling and CRM booking; Gemini analyzes call transcripts for summary, sentiment, and action items
 - **Transportation Data and Modeling:** Co-developed TransLink's regional travel demand model in Python; built data pipelines in Python and Databricks
-- **MCP Server for Model Outputs:** MCP server with 8 tools that lets LLM clients query travel-model outputs using DuckDB SQL—trip tables, skims, and network data in Parquet and OMX formats; packaged in Docker
+- **MCP Server for Model Outputs:** MCP server with 8 tools that lets LLM clients query travel-model outputs using DuckDB SQL—trip, person, household and zone tables in Parquet plus OMX skim matrices; packaged in Docker
 
 The home page also includes a "How I Build AI Systems" section highlighting reliability practices:
 - **Evals over guesswork:** In ouroAI, replaced hand-written 3-call prompt chain with DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labelled conversations, reaching 88.9% on held-out validation set, backed by LLM eval suite and side-by-side comparison runner

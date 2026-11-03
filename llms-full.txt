@@ -18,7 +18,7 @@ The home page includes a "Selected Work" section highlighting five key project a
 
 4. **Transportation Data and Modeling:** Co-developed TransLink's regional trip- and activity-based travel demand model in Python; built data pipelines in Python and Databricks for a large household travel survey program.
 
-5. **MCP Server for Model Outputs:** MCP (Model Context Protocol) server with 8 tools that lets LLM clients query travel-model outputs using DuckDB SQL—trip tables, skims, and network data in Parquet and OMX formats. Packaged in Docker for easy deployment.
+5. **MCP Server for Model Outputs:** MCP (Model Context Protocol) server with 8 tools that lets LLM clients query travel-model outputs using DuckDB SQL—trip, person, household and zone tables in Parquet plus OMX skim matrices. Packaged in Docker for easy deployment.
 
 The home page also includes a "How I Build AI Systems" section highlighting reliability practices used when shipping LLM and agent systems:
 
