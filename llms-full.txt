@@ -71,6 +71,14 @@ Building production-grade multi-agent LLM and voice AI applications:
 
 **Answr** — Conversational survey and interview applications (employee satisfaction, customer feedback, transit-rider research) built on OpenAI Assistants API and LlamaIndex workflows with LLM follow-up probing, analysis dashboards, and WebRTC voice versions; includes a multilingual (English/Spanish) HR project management app built within weeks of the Assistants API's November 2023 launch
 
+**AI × Transportation**
+
+**travel-mcp-server** — Model Context Protocol server with 8 tools that lets LLM clients query travel-model outputs (Parquet tables, OMX skims) with DuckDB SQL, pull trip statistics and skims, and generate charts; packaged in Docker
+
+**LLM-Driven Four-Step Travel Demand Model** — Trip generation, distribution, and mode choice answered by an LLM decision engine instead of estimated coefficients; validated on the Sioux Falls region against ACS, LODES, NHTS, and traffic counts and compared with a conventional gravity/MNL model; reproducible experiments with hash-keyed request cache, cost guard with dry-run, and placebo-controlled prompt-framing tests
+
+**tdm-platform** — Region-agnostic ActivitySim + AequilibraE closed-loop travel demand platform (Frank-Wolfe user-equilibrium assignment with skim feedback) that builds a model region from open OSM/TIGER data and runs on Modal serverless compute for about $0.07 per scenario
+
 Partnered with YC founders to translate early ideas into working products, turning fuzzy requirements into clear specs and shipped features. Build daily with AI coding agents (Claude Code, Codex, Cursor, Replit Agent) to ship tested, containerized services quickly.
 
 ### Previous Experience
