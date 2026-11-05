@@ -23,6 +23,8 @@ I'm an applied AI engineer who builds production-grade multi-agent LLM and voice
 
 Building production-grade multi-agent LLM and voice AI applications:
 
+Partnered with YC founders to translate early ideas into working products, turning fuzzy requirements into clear specs and shipped features. Build daily with AI coding agents (Claude Code, Codex, Cursor, Replit Agent) to ship tested, containerized services quickly.
+
 **ouroAI** — Multi-agent CRM automation platform (238 commits, 28+ PRs)
 - Built a Gemini-orchestrated platform where four specialized tool-calling agents (query, outreach, sync, reporting) run SMS, email, WhatsApp, and AI voice campaigns through Twilio, Resend, and ElevenLabs with AI-generated replies, human escalation, and CRM sync
 - Replaced a 3-call prompt chain with a DSPy ChainOfThought pipeline (channel choice, escalation, reply generation), optimized with BootstrapFewShot on 89 labeled conversations to 88.9% accuracy on a held-out validation set
@@ -46,8 +48,6 @@ Building production-grade multi-agent LLM and voice AI applications:
 **tdm-platform** — Region-agnostic ActivitySim + AequilibraE closed-loop travel demand platform (Frank-Wolfe user-equilibrium assignment with skim feedback) that builds a model region from open OSM/TIGER data and runs on Modal serverless compute for about $0.07 per scenario
 
 [More details on the Projects page](/projects.html).
-
-Partnered with YC founders to translate early ideas into working products, turning fuzzy requirements into clear specs and shipped features. Build daily with AI coding agents (Claude Code, Codex, Cursor, Replit Agent) to ship tested, containerized services quickly.
 
 ## Previous Experience
 
