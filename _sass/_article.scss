@@ -36,8 +36,17 @@
   text-indent: 0;
 }
 
+.post.projects-page p {
+  text-align: left;
+  text-indent: 0;
+}
+
 @media (min-width: 960px) {
   .post.about-page > * {
+    max-width: 48rem;
+  }
+
+  .post.projects-page > * {
     max-width: 48rem;
   }
 }
