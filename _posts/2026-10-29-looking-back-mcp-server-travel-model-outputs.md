@@ -65,4 +65,4 @@ The synthetic demo data (20 zones, 100 households, 250 persons, 800 trips) was e
 
 The decision to add `execute_sql` was the right one. Pre-built analysis tools cover common cases, but they can't anticipate every question. SQL gives the LLM the flexibility to answer questions I didn't think of when I wrote the server. The data dictionary makes that practical by teaching the LLM the schema and the domain.
 
-More details about travel-mcp-server and other travel modeling projects are available on my [Projects page](/projects#travel-mcp-server). The code is open source and available at [github.com/sumitbindra/travel-mcp-server](https://github.com/sumitbindra/travel-mcp-server).
+More details about travel-mcp-server and other travel modeling projects are available on my [Projects page](/projects/#travel-mcp-server). The code is open source and available at [github.com/sumitbindra/travel-mcp-server](https://github.com/sumitbindra/travel-mcp-server).

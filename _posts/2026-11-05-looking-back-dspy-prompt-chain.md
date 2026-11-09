@@ -91,4 +91,4 @@ The weighted metric was the key design choice. Without it, the optimizer wouldn'
 
 The 88.9% result on 27 held-out examples wasn't perfect, but it was concrete. I knew where the pipeline succeeded (all channel-switch scenarios scored 1.0) and where it struggled (edge cases). That clarity—backed by numbers—was something the hand-written pipeline never gave me.
 
-More details about ouroAI and the full technical stack are available on my [Projects page](/projects#ouroai).
+More details about ouroAI and the full technical stack are available on my [Projects page](/projects/#ouroai).

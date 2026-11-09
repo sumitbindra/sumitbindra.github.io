@@ -20,8 +20,8 @@ description: Applied AI Engineer building multi-agent LLM and voice AI systems. 
     <p>Hands-on applied AI: multi-agent systems with tool calling, RAG pipelines, ElevenLabs voice agents and MCP servers, built daily with <strong>Claude Code</strong>, <strong>Codex</strong> and <strong>Cursor</strong>.</p>
     
     <p class="link-row">
-      <a href="/about.html">About & Experience</a>
-      <a href="/projects.html">Projects</a>
+      <a href="/about/">About & Experience</a>
+      <a href="/projects/">Projects</a>
       <a href="/assets/resume/Sumit_Bindra_Resume.pdf">Resume (PDF)</a>
       <a href="https://www.linkedin.com/in/sumitbindra/">LinkedIn</a>
       <a href="https://github.com/sumitbindra">GitHub</a>
@@ -34,27 +34,27 @@ description: Applied AI Engineer building multi-agent LLM and voice AI systems. 
     
     <div class="work-items">
       <div class="work-item">
-        <h3><a href="/projects#cica">Document Intelligence (CICA)</a></h3>
+        <h3><a href="/projects/#cica">Document Intelligence (CICA)</a></h3>
         <p>Structured extraction from bid forms, specs and proposals using OpenAI/Gemini with Pydantic/JSON-schema outputs, LlamaIndex RAG, Azure Document Intelligence and Reducto parsing. Flags financial, schedule, scope and legal discrepancies, with an LLM-judged eval harness.</p>
       </div>
 
       <div class="work-item">
-        <h3><a href="/projects#ouroai">Multi-Agent CRM Automation (ouroAI)</a></h3>
+        <h3><a href="/projects/#ouroai">Multi-Agent CRM Automation (ouroAI)</a></h3>
         <p>A Gemini orchestrator routes work to four tool-calling sub-agents across SMS, email, WhatsApp and voice, with escalation to humans. A DSPy pipeline optimized on 89 labelled conversations reached 88.9% on a held-out validation set, backed by an LLM eval suite.</p>
       </div>
 
       <div class="work-item">
-        <h3><a href="/projects#voice-scheduler">Voice AI Agents</a></h3>
+        <h3><a href="/projects/#voice-scheduler">Voice AI Agents</a></h3>
         <p>Inbound and outbound voice agents on ElevenLabs Conversational AI over Twilio, with signature-verified FastAPI webhooks for scheduling and CRM booking.</p>
       </div>
 
       <div class="work-item">
-        <h3><a href="/projects#ai-transportation">Transportation Data and Modeling</a></h3>
+        <h3><a href="/projects/#ai-transportation">Transportation Data and Modeling</a></h3>
         <p>Co-developed TransLink's regional trip- and activity-based travel demand model in Python. Built data pipelines in Python and Databricks for a large household travel survey program.</p>
       </div>
 
       <div class="work-item">
-        <h3><a href="/projects#travel-mcp-server">MCP Server for Model Outputs</a></h3>
+        <h3><a href="/projects/#travel-mcp-server">MCP Server for Model Outputs</a></h3>
         <p>MCP (Model Context Protocol) server with 8 tools that lets LLM clients query travel-model outputs using DuckDB SQL—trip, person, household and zone tables in Parquet plus OMX skim matrices. Pulls trip statistics and skims, generates charts, and is packaged in Docker for easy deployment.</p>
       </div>
     </div>
@@ -64,17 +64,17 @@ description: Applied AI Engineer building multi-agent LLM and voice AI systems. 
     <h2 class="content-title divided">How I Build AI Systems</h2>
     
     <ul>
-      <li><strong>Evals over guesswork:</strong> In <a href="/projects#ouroai">ouroAI</a>, I replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labelled conversations, reaching 88.9% on a held-out validation set, backed by an LLM eval suite and side-by-side comparison runner.</li>
-      
-      <li><strong>LLM-judged eval harness:</strong> For <a href="/projects#cica">CICA document extraction</a>, I built an eval harness using Pydantic/JSON-schema structured outputs that measures extraction accuracy and discrepancy detection.</li>
-      
-      <li><strong>Tool integrations:</strong> I built <a href="/projects#travel-mcp-server">travel-mcp-server</a>, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL. For <a href="/projects#voice-scheduler">ElevenLabs voice agents</a>, I use server tools that call signature-verified FastAPI webhooks.</li>
-      
-      <li><strong>Humans in the loop:</strong> <a href="/projects#ouroai">ouroAI agents</a> escalate to humans when needed.</li>
-      
-      <li><strong>Reproducible experiments:</strong> The <a href="/projects#llm-four-step-model">LLM-driven four-step travel demand model</a> uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.</li>
-      
-      <li><strong>Testing:</strong> <a href="/projects#ouroai">ouroAI</a> has 50+ pytest files plus Vitest and Playwright end-to-end tests.</li>
+      <li><strong>Evals over guesswork:</strong> In <a href="/projects/#ouroai">ouroAI</a>, I replaced a hand-written 3-call prompt chain with a DSPy ChainOfThought pipeline optimized with BootstrapFewShot on 89 labelled conversations, reaching 88.9% on a held-out validation set, backed by an LLM eval suite and side-by-side comparison runner.</li>
+
+      <li><strong>LLM-judged eval harness:</strong> For <a href="/projects/#cica">CICA document extraction</a>, I built an eval harness using Pydantic/JSON-schema structured outputs that measures extraction accuracy and discrepancy detection.</li>
+
+      <li><strong>Tool integrations:</strong> I built <a href="/projects/#travel-mcp-server">travel-mcp-server</a>, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL. For <a href="/projects/#voice-scheduler">ElevenLabs voice agents</a>, I use server tools that call signature-verified FastAPI webhooks.</li>
+
+      <li><strong>Humans in the loop:</strong> <a href="/projects/#ouroai">ouroAI agents</a> escalate to humans when needed.</li>
+
+      <li><strong>Reproducible experiments:</strong> The <a href="/projects/#llm-four-step-model">LLM-driven four-step travel demand model</a> uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.</li>
+
+      <li><strong>Testing:</strong> <a href="/projects/#ouroai">ouroAI</a> has 50+ pytest files plus Vitest and Playwright end-to-end tests.</li>
     </ul>
   </section>
 

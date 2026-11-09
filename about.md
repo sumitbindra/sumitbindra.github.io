@@ -3,6 +3,10 @@ layout: post
 title: About
 description: Applied AI engineer with 15 years of transportation data modeling experience. Building production-grade multi-agent LLM and voice AI systems.
 page_class: about-page
+permalink: /about/
+redirect_from:
+  - /about
+  - /about.html
 ---
 
 I'm an applied AI engineer who builds production-grade multi-agent LLM and voice AI systems, backed by 15 years of experience in transportation data modeling and forecasting. I ship end-to-end AI applications—from multi-agent orchestration platforms to real-time voice agents—using Python, TypeScript, and modern AI frameworks.
@@ -47,7 +51,7 @@ Partnered with YC founders to translate early ideas into working products, turni
 
 **tdm-platform** — Region-agnostic ActivitySim + AequilibraE closed-loop travel demand platform (Frank-Wolfe user-equilibrium assignment with skim feedback) that builds a model region from open OSM/TIGER data and runs on Modal serverless compute for about $0.07 per scenario
 
-[More details on the Projects page](/projects.html).
+[More details on the Projects page](/projects/).
 
 ## Previous Experience
 

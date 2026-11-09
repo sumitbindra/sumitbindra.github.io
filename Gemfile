@@ -6,4 +6,5 @@ gemspec
 # for demo site
 gem "jekyll-paginate"
 gem "jekyll-sitemap"
+gem "jekyll-redirect-from"
 gem "bigdecimal"
