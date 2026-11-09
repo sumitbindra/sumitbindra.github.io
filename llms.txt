@@ -30,8 +30,10 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 - [About](/about.html): Detailed experience, technical background, education, and publications
 - [Projects](/projects.html): Case studies of multi-agent LLM systems, AI × transportation projects, and voice AI applications
 - [Looking back](/looking-back/): A retrospective series from 2026 on hands-on applied AI projects from 2024-2026
-  - [Part 17: Replacing a prompt chain with DSPy: 88.9% on held-out data](https://sumitbindra.com/2026/11/05/looking-back-dspy-prompt-chain.html): February-April 2026 DSPy ChainOfThought pipeline replacing 3-call Gemini prompt chain, BootstrapFewShot optimization on 89 labelled conversations, 88.9% on 27 validation examples, weighted metric with escalation 0.35
+  - [Part 1: Recoding survey data with the OpenAI Assistants API](https://sumitbindra.com/2026/11/09/looking-back-recoding-survey-data-assistants-api.html): September-October 2024 prototype comparing two approaches—per-row Structured Outputs with dynamic Pydantic models vs. Assistants API with Code Interpreter for whole-table pandas transformations, five-step pipeline with retry logic
+  - [Part 10: Structured extraction with Pydantic and JSON schemas, the core of CICA](https://sumitbindra.com/2026/10/26/looking-back-structured-extraction-pydantic-cica.html): March-June 2025 construction bidding document extraction, YAML question definitions, schema-constrained responses, one question at a time, pytest harness with LLM judge
   - [Part 13: MCP server for travel-model outputs](https://sumitbindra.com/2026/10/29/looking-back-mcp-server-travel-model-outputs.html): November 2025 MCP server, 8 tools, DuckDB SQL over Parquet, OMX skims, matplotlib charts, synthetic demo data
+  - [Part 17: Replacing a prompt chain with DSPy: 88.9% on held-out data](https://sumitbindra.com/2026/11/05/looking-back-dspy-prompt-chain.html): February-April 2026 DSPy ChainOfThought pipeline replacing 3-call Gemini prompt chain, BootstrapFewShot optimization on 89 labelled conversations, 88.9% on 27 validation examples, weighted metric with escalation 0.35
 - [Resume](/assets/resume/Sumit_Bindra_Resume.pdf): Full resume (PDF)
 - [LinkedIn](https://www.linkedin.com/in/sumitbindra/)
 - [GitHub](https://github.com/sumitbindra)
