@@ -217,5 +217,7 @@ Signature verification ensures only authentic agent-invoked actions are executed
 
 - Email: sumitbindra@gmail.com
 - Website: https://sumitbindra.com
+- About: https://sumitbindra.com/about/
+- Projects: https://sumitbindra.com/projects/
 - LinkedIn: https://www.linkedin.com/in/sumitbindra/
 - GitHub: https://github.com/sumitbindra

@@ -82,4 +82,4 @@ Structured outputs changed the game. Before schema-constrained responses were wi
 
 The lesson that stuck with me: don't ask models to do more than they need to. Define the task narrowly, give them a clear structure to fill in, and verify the results systematically. That discipline—treating LLM-based systems like any other software, with schemas, tests, and error handling—was what made CICA work.
 
-More details about CICA and the full technical stack are available on my [Projects page](/projects#cica).
+More details about CICA and the full technical stack are available on my [Projects page](/projects/#cica).
