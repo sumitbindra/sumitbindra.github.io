@@ -31,22 +31,17 @@
   text-indent: 0;
 }
 
-.post.about-page p {
-  text-align: left;
-  text-indent: 0;
-}
-
-.post.projects-page p {
+.post.about-page p,
+.post.projects-page p,
+.post.looking-back-page p {
   text-align: left;
   text-indent: 0;
 }
 
 @media (min-width: 960px) {
-  .post.about-page > * {
-    max-width: 48rem;
-  }
-
-  .post.projects-page > * {
+  .post.about-page > *,
+  .post.projects-page > *,
+  .post.looking-back-page > * {
     max-width: 48rem;
   }
 }
