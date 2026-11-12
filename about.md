@@ -11,6 +11,15 @@ redirect_from:
 
 I'm an applied AI engineer who builds production-grade multi-agent LLM and voice AI systems, backed by 15 years of experience in transportation data modeling and forecasting. I ship end-to-end AI applications—from multi-agent orchestration platforms to real-time voice agents—using Python, TypeScript, and modern AI frameworks.
 
+## How I Work
+
+I take AI and data projects from a business problem to something people actually use:
+
+- **Discovery and scoping:** Start with stakeholder discovery and scoping to turn fuzzy requirements into clear specs—partnered with YC founders to translate early ideas into working products
+- **Build fast with working software:** Translate domain problems into working software, building daily with Claude Code, Codex, and Cursor to ship tested, containerized services quickly
+- **Measure before shipping:** Use evals instead of guesswork—a DSPy pipeline optimized on 89 labeled conversations reached 88.9% on held-out validation; LLM-judged eval harness for document extraction; cost guards and dry runs for LLM experiments
+- **Training and adoption:** Stay through implementation, training, and support—8 years working directly with client agency staff at RSG from scoping through implementation, training, and support; at TransLink, run recurring model user group meetings and turn forecasts into clear recommendations for decision-makers
+
 ## Current Work
 
 ### TransLink (Metro Vancouver, BC)
