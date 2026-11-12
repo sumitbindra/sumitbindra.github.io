@@ -8,6 +8,15 @@ Currently: Project Manager & Senior Transportation Data Modeler at TransLink (Me
 
 Hands-on applied AI: multi-agent systems with tool calling, RAG pipelines, ElevenLabs voice agents and MCP servers, built daily with Claude Code, Codex and Cursor.
 
+## How I Work
+
+I take AI and data projects from a business problem to something people actually use:
+
+- **Discovery and scoping:** Start with stakeholder discovery and scoping to turn fuzzy requirements into clear specs—partnered with YC founders to translate early ideas into working products
+- **Build fast with working software:** Translate domain problems into working software, building daily with Claude Code, Codex, and Cursor to ship tested, containerized services quickly
+- **Measure before shipping:** Use evals instead of guesswork—a DSPy pipeline optimized on 89 labeled conversations reached 88.9% on held-out validation; LLM-judged eval harness for document extraction; cost guards and dry runs for LLM experiments
+- **Training and adoption:** Stay through implementation, training, and support—8 years working directly with client agency staff at RSG from scoping through implementation, training, and support; at TransLink, run recurring model user group meetings and turn forecasts into clear recommendations for decision-makers
+
 ## Home Page
 
 The home page includes a "Selected Work" section highlighting:
