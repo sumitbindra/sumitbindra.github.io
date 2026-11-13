@@ -46,6 +46,65 @@
   }
 }
 
+.post.projects-page {
+  h3 {
+    margin-top: 2.5em;
+  }
+
+  p strong:first-child {
+    display: block;
+    margin-top: 1.5em;
+  }
+
+  .projects-toc {
+    background: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1.5em;
+    margin: 2em 0;
+    font-size: 0.9em;
+
+    h4 {
+      margin: 0 0 1em 0;
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    .projects-toc-section {
+      margin-bottom: 1.25em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 0.5em;
+        color: #24292e;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.5em;
+      }
+
+      li {
+        margin: 0.4em 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: $brand-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
 .post a:hover {
   background: $highlight;
 }
