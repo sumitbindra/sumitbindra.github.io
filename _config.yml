@@ -20,6 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sumitbindra.com" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/icon-512.png
+social_image: /assets/images/social-card.png
+social_image_alt: Sumit Bindra — Applied AI Engineer
 twitter_username: MrSumitBindra
 github_username: sumitbindra
 
@@ -58,3 +60,4 @@ exclude:
   - node_modules
   - vendor
   - screenshots
+  - tools

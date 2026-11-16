@@ -8,7 +8,9 @@
     
     <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
 
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">  
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
     <!-- Open Graph / LinkedIn meta tags -->
     <meta property="og:type" content="website">
@@ -16,14 +18,17 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{% if page.title and page.title != '' %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{{ site.icon | absolute_url }}">
+    <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.social_image %}{{ site.social_image | absolute_url }}{% else %}{{ site.icon | absolute_url }}{% endif %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ site.social_image_alt }}">
     
     <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter_username }}">
     <meta name="twitter:title" content="{% if page.title and page.title != '' %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="twitter:image" content="{{ site.icon | absolute_url }}">
+    <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.social_image %}{{ site.social_image | absolute_url }}{% else %}{{ site.icon | absolute_url }}{% endif %}">
 
     <!-- JSON-LD structured data -->
     <script type="application/ld+json">
