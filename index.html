@@ -70,7 +70,7 @@ description: Applied AI Engineer building multi-agent LLM and voice AI systems. 
 
       <li><strong>Tool integrations:</strong> I built <a href="/projects/#travel-mcp-server">travel-mcp-server</a>, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL. For <a href="/projects/#voice-scheduler">ElevenLabs voice agents</a>, I use server tools that call signature-verified FastAPI webhooks.</li>
 
-      <li><strong>Humans in the loop:</strong> <a href="/projects/#ouroai">ouroAI agents</a> escalate to humans when needed.</li>
+      <li><strong>Guardrails and humans in the loop:</strong> In <a href="/projects/#ouroai">ouroAI</a>, escalation to a human is an explicit step in the DSPy pipeline (channel choice, escalation, reply generation), so it is measured by the same LLM eval suite as the replies. My <a href="/projects/#voice-scheduler">ElevenLabs voice agents</a> can only schedule or book into the CRM after the FastAPI webhook verifies the request signature, and Gemini reviews every call transcript for summary, sentiment, action items and reschedule intent.</li>
 
       <li><strong>Reproducible experiments:</strong> The <a href="/projects/#llm-four-step-model">LLM-driven four-step travel demand model</a> uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.</li>
 
