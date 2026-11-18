@@ -37,6 +37,8 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 
 - **Tool integrations:** Built travel-mcp-server, an MCP server with 8 tools that lets LLM clients query travel-model outputs with DuckDB SQL. For ElevenLabs voice agents, use server tools that call signature-verified FastAPI webhooks.
 
+- **Retrieval matched to the data:** In ouroAI, I built hybrid retrieval that combines Gemini 3072-d embeddings with BM25 keyword search over CRM contacts and per-account knowledge bases synced to voice agents, stored in pgvector (Supabase). For CICA document extraction, LlamaIndex RAG works alongside Pydantic/JSON-schema structured outputs over bid forms, specs and proposals.
+
 - **Guardrails and humans in the loop:** In ouroAI, escalation to a human is an explicit step in the DSPy pipeline (channel choice, escalation, reply generation), so it is measured by the same LLM eval suite as the replies. My ElevenLabs voice agents can only schedule or book into the CRM after the FastAPI webhook verifies the request signature, and Gemini reviews every call transcript for summary, sentiment, action items and reschedule intent.
 
 - **Reproducible experiments:** The LLM-driven four-step travel demand model uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.
