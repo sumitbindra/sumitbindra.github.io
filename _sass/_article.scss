@@ -94,8 +94,11 @@
       }
 
       a {
-        text-decoration: none;
-        color: $brand-color;
+        color: $text-color;
+        text-decoration: underline;
+        text-decoration-color: $brand-color;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
 
         &:hover {
           text-decoration: underline;
