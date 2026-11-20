@@ -74,6 +74,8 @@ description: Applied AI Engineer building multi-agent LLM and voice AI systems. 
 
       <li><strong>Guardrails and humans in the loop:</strong> In <a href="/projects/#ouroai">ouroAI</a>, escalation to a human is an explicit step in the DSPy pipeline (channel choice, escalation, reply generation), so it is measured by the same LLM eval suite as the replies. My <a href="/projects/#voice-scheduler">ElevenLabs voice agents</a> can only schedule or book into the CRM after the FastAPI webhook verifies the request signature, and Gemini reviews every call transcript for summary, sentiment, action items and reschedule intent.</li>
 
+      <li><strong>Sensitive data, scoped access:</strong> <a href="/projects/#ouroai">ouroAI</a> is multi-tenant, with Supabase Auth and Row Level Security (RLS) keeping each account's data separate. At TransLink, I lead a multi-million-dollar household trip diary and screenline data program covering sensitive personal information from 65% of the region's households, owning the data flow from collection through model calibration and estimation.</li>
+
       <li><strong>Reproducible experiments:</strong> The <a href="/projects/#llm-four-step-model">LLM-driven four-step travel demand model</a> uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.</li>
 
       <li><strong>Testing:</strong> <a href="/projects/#ouroai">ouroAI</a> has 50+ pytest files plus Vitest and Playwright end-to-end tests.</li>
