@@ -43,6 +43,8 @@ The home page also includes a "How I Build AI Systems" section highlighting reli
 
 - **Sensitive data, scoped access:** ouroAI is multi-tenant, with Supabase Auth and Row Level Security (RLS) keeping each account's data separate. At TransLink, I lead a multi-million-dollar household trip diary and screenline data program covering sensitive personal information from 65% of the region's households, owning the data flow from collection through model calibration and estimation.
 
+- **Built with the people who use it:** At TransLink, I run recurring model user group meetings, build consensus on methods, and turn forecasts into clear recommendations for decision-makers. At RSG, I worked directly with state DOT and MPO staff from scoping through implementation, training and support. I have also partnered with YC founders to turn fuzzy requirements into clear specs and shipped features.
+
 - **Reproducible experiments:** The LLM-driven four-step travel demand model uses a hash-keyed SQLite request cache, a cost guard with dry-run, and placebo-controlled prompt-framing tests.
 
 - **Testing:** ouroAI has 50+ pytest files plus Vitest and Playwright end-to-end tests.
