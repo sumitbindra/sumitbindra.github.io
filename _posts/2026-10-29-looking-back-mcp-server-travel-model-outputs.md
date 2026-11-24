@@ -4,6 +4,7 @@ title: "Looking back: why I built an MCP server for travel-model outputs"
 date: 2026-10-29
 series: looking-back
 series_part: 13
+excerpt: "Built travel-mcp-server with 8 tools, DuckDB SQL over Parquet, OMX skims, and matplotlib charts; synthetic demo data with 20 zones, 100 households."
 ---
 
 This is a look back, written in 2026, at work from November 2025. By that point, the Model Context Protocol—introduced by Anthropic in late 2024—had become a common way to plug tools and data into LLM clients and IDE agents. It gave applications a standardized interface to domain-specific resources without requiring custom integrations for every client.

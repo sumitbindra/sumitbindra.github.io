@@ -4,6 +4,7 @@ title: "Looking back: structured extraction with Pydantic and JSON schemas, the 
 date: 2026-10-26
 series: looking-back
 series_part: 10
+excerpt: "Built CICA with Pydantic/JSON-schema extraction from construction bid documents, asking one question at a time, with pytest LLM-judged tests measuring accuracy."
 ---
 
 This is a look back, written in 2026, at work from spring 2025—specifically March to June of that year. By early 2025, major model APIs had added the ability to constrain output to a JSON schema. OpenAI had introduced structured outputs in August 2024, and Gemini's API supported response schemas. That capability made schema-first extraction practical in a way it hadn't been before, and CICA was built around it.

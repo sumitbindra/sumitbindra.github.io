@@ -4,6 +4,7 @@ title: "Looking back: Replacing a prompt chain with DSPy: 88.9% on held-out data
 date: 2026-11-05
 series: looking-back
 series_part: 17
+excerpt: "Replaced 3-call Gemini prompt pipeline with DSPy ChainOfThought optimized via BootstrapFewShot on 89 labeled conversations, reaching 88.9% on 27 validation examples."
 ---
 
 This is a look back, written in 2026, at work from February to April 2026. By early 2026, teams building with LLMs were moving from hand-written prompts toward programmatic prompt optimization. DSPy had emerged as a practical tool: define signatures (input-output structure), write modules composing those signatures, and let optimizers like BootstrapFewShot and MIPROv2 learn better prompts from labeled examples. The promise was measurable, repeatable quality instead of guesswork.
