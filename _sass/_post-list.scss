@@ -47,6 +47,18 @@
   }
 }
 
+.post-link__title {
+  text-decoration: underline;
+  text-decoration-color: $brand-color;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.post-link:hover .post-link__title,
+.post-link:focus .post-link__title {
+  background: $highlight;
+}
+
 .post-link__title + .post-link__excerpt {
   opacity: 1;
 }
