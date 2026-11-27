@@ -5,14 +5,19 @@
 }
 
 #search__input {
-  background: transparent;
-  border: 0;
+  background: #ffffff;
+  border: 2px solid $text-color;
+  border-radius: 4px;
   font: 1em $font-family;
-  padding: .5em;
+  padding: .75em 1em;
   color: $text-color;
   text-align: center;
-  &:focus {
-    outline: 1px dashed $text-color;
+  max-width: 280px;
+  width: 100%;
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid $text-color;
+    outline-offset: 2px;
   }
 }
 
